@@ -1,9 +1,5 @@
 ﻿using LoggerLibrary;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleAppLogger
 {
@@ -11,7 +7,6 @@ namespace ConsoleAppLogger
     {
         static void Main(string[] args)
         {
-            
             VariableWatcher<int> a = new VariableWatcher<int>();
             a.ValueChanged += Variable_ValueChanged;
             bool i = true;
@@ -33,9 +28,9 @@ namespace ConsoleAppLogger
 
         private static void Variable_ValueChanged(object sender, ValueChangedEventArgs<int> e)
         {
-            string logFileName = "log.txt";
             Logger logger = Logger.GetInstance();
-            logger.LogMessage("Значение a изменилось");
+            string change = "Значение 'а' изменилось на " + Convert.ToString(e.NewValue);
+            logger.LogMessage(change);
         }
     }
 }
