@@ -1,6 +1,4 @@
-using NUnit.Framework;
 using LoggerLibrary;
-using Microsoft.VisualStudio.TestPlatform.Utilities;
 
 namespace LoggerLibraryTests
 {
@@ -10,7 +8,8 @@ namespace LoggerLibraryTests
 
         private StringWriter consoleOutput;
 
-        // ћетод SetUp выполн€етс€ перед каждым тестом и используетс€ дл€ настройки окружени€ теста.
+        // ћетод SetUp выполн€етс€ перед каждым тестом
+        // и используетс€ дл€ настройки окружени€ теста.
         [SetUp]
         public void RedirectConsoleOutput()
         {
@@ -18,7 +17,8 @@ namespace LoggerLibraryTests
             Console.SetOut(consoleOutput);
         }
 
-        // ћетод TearDown выполн€етс€ после каждого теста и используетс€ дл€ восстановлени€ окружени€.
+        // ћетод TearDown выполн€етс€ после каждого теста
+        // и используетс€ дл€ восстановлени€ окружени€.
         [TearDown]
         public void RestoreConsoleOutput()
         {
@@ -29,7 +29,6 @@ namespace LoggerLibraryTests
             Console.SetOut(Console.Out);
         }
 
-
         // Ётот тест провер€ет, что Logger - класс с единственным экземпл€ром.
         [Test]
         public void Logger_InstanceIsSingleton()
@@ -39,7 +38,7 @@ namespace LoggerLibraryTests
             Logger logger2 = Logger.GetInstance();
 
             // Act & Assert
-            Assert.AreSame(logger1, logger2, "Ёкземпл€р Logger не €вл€етс€ Singleton");
+            Assert.AreSame(logger1, logger2);
         }
 
         // Ётот тест провер€ет, что Logger правильно записывает сообщение в консоль.
