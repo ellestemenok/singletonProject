@@ -33,6 +33,7 @@ namespace ConsoleAppLogger
 
         private static void Variable_ValueChanged(object sender, ValueChangedEventArgs<int> e)
         {
+            string logFileName = "log.txt";
             Logger logger = Logger.GetInstance();
             logger.LogMessage("Значение a изменилось");
         }
