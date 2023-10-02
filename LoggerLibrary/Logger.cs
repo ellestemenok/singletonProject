@@ -1,12 +1,10 @@
 ﻿using System;
-
 namespace LoggerLibrary
 {
     public class Logger
     {
         private static Logger instance;
         private FileLogger fileLogger;
-
 
         // Инициализируем FileLogger с именем файла по умолчанию.
         private Logger()
