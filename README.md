@@ -1,5 +1,5 @@
 # SingletonProject
-Реализация паттерна Singleton
+## Реализация паттерна Singleton
 SingletonProject - это решение, состоящее из 3 проектов: ConsoleAppLogger, LoggerLibrary и LoggerLibraryTests, предназначенных для демонстрации и использования паттерна Singleton, логгирования в приложении на платформе .NET, а также проведении тестов библиотеки классов.
 ***
 ## Содержание
